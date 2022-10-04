@@ -1,0 +1,3 @@
+EL hiperplano que separa los datos en un problema de clasificación se llama: Modelo o hipótesis 
+
+En la entrada de entrenamiento de un problema de clasificación supervisado,los datos solo pertenecen a una sola clase
