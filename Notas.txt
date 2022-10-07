@@ -1,3 +1,11 @@
 EL hiperplano que separa los datos en un problema de clasificación se llama: Modelo o hipótesis 
 
 En la entrada de entrenamiento de un problema de clasificación supervisado,los datos solo pertenecen a una sola clase
+
+- Clase Viernes 7 octubre:
+
+El perceptron usa una función no-lineal
+
+El objetivo de una SVM(Maquina de soporte vectorial) es encontrar vectores de soporte (paralelos)
+que maximizen el margen (distancia entre las 2 rectas)
+
