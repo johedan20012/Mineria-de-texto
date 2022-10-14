@@ -619,7 +619,7 @@ class Perceptron(object):
         """
         Funcion de evaluacion del rendimiento
         Entrada: arreglos numpy con datos de prueba y prediccion
-        Salida: exactitud, precision y recall          
+        Salida: exactitud, precision, recall y f1-score         
         """
         # r contiene los indices donde la prediccion y los valores reales coinciden
         r = np.where(y_predicted == y_test)
@@ -636,8 +636,9 @@ class Perceptron(object):
         accuracy = len(acc)/len(y_test)*100
         precision = len(list(TP))/len(list(TP_FP))*100
         recall = len(list(TP))/len(pos[0])*100
+        f1Score = (2*precision*recall)/(precision+recall)*100
 
-        return accuracy, precision, recall
+        return accuracy, precision, recall, f1Score
 
     def f(self, x, c=0):
         """
@@ -809,7 +810,7 @@ class PerceptronKernel():
         """
         Funcion de evaluacion del rendimiento
         Entrada: arreglos numpy con datos de prueba y prediccion
-        Salida: exactitud, precision y recall          
+        Salida: exactitud, precision, recall y f1score          
         """
         # r contiene los indices donde la prediccion y los valores reales coinciden
         r = np.where(y_predicted == y_test)
@@ -826,8 +827,9 @@ class PerceptronKernel():
         accuracy = len(acc)/len(y_test)*100
         precision = len(list(TP))/len(list(TP_FP))*100
         recall = len(list(TP))/len(pos[0])*100
+        f1Score = (2*precision*recall)/(precision+recall)*100
 
-        return accuracy, precision, recall
+        return accuracy, precision, recall, f1Score
 
 
 def test_basico(X_train, y_train, X_test, y_test):
